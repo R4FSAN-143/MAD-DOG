@@ -435,10 +435,10 @@ def sh6():
         clear()
         banner()
         tl = str(len(user))
-        print(f"{P}[{H}•{P}]{WHITE}WElCOME  MY TOOLS     : {GREEN}"+name)
-        print(f"{P}[{H}•{P}]{WHITE}TOTAL IDZ             : {GREEN}"+tl)
-        print(f"{P}[{H}•{P}]{WHITE}NUMBER YOU PUT        : {GREEN}"+code)
-        print(f"{P}[{H}•{P}]{WHITE}TO STOP PROCESS Ctrl + Z ")
+        print(f"{RED}[{H}☆{RED}]{WHITE}WElCOME  MY TOOLS     : {GREEN}"+name)
+        print(f"{RED}[{H}☆{RED}]{WHITE}TOTAL IDZ             : {GREEN}"+tl)
+        print(f"{RED}[{H}☆{RED}]{WHITE}NUMBER YOU PUT        : {GREEN}"+code)
+        print(f"{RED}[{H}☆{RED}]{WHITE}TO STOP PROCESS Ctrl + Z ")
         print(f"====================================================")
         for love in user:
             uid = code+love
