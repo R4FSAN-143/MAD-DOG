@@ -529,18 +529,21 @@ def m(uid,pwx,tl):
             header = {"authority": 'mbasic.facebook.com',
             "method": 'GET',
             "scheme": 'https',
-            'accept': '*/*',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
-            # 'cookie': 'datr=wZ_pY9aMkf8AFEgFXkpkr-oo; sb=wZ_pY2-V7WuYpyeZg3yMObfx; locale=en_US; wd=412x772; fr=0Io6O5s8KoLgbsXZd.AWXch9eKEbJB_pd8WFkA0gXkBho.Bj9FoG.jZ.AAA.0.0.Bj-y4H.AWUN-FDwTN4; zsh=ASQZMRDclSEIR48qwhhwUQNHKnUDTKJhcWDVYloL1-mT5RVP7crDDMtsd1a2aUU3mSp9IFdryhwlwc9Ug0YTfy-1_ox79u8H4kQ_8-ppI2w5qqEz1mjoRrHhmZmqCZhlL4ZVWHNTyNCBOqLJlVEnl33K_PYHjNtzpG4jKGi5o0d8z0KygIYTXKphUgMSKuME-DOd0VE4xIkhtbGe0shqEIfnsaVA22fJKFlgABpkhVU2fAikSMhwRAqhNq3ekn2WXygL1fkURwX57EIeF-bBkS1ctgZS5lKaz8g4vMzYb-pi8R8LsiSLIOLvI16J-kVQZJP7dcY5kQGOXRaJW8L5xSI',
-            'referer': 'https://mbasic.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',
+            'cache-control': 'max-age=0',
+            # 'cookie': 'datr=wZ_pY9aMkf8AFEgFXkpkr-oo; sb=wZ_pY2-V7WuYpyeZg3yMObfx; locale=en_US; zsh=ASQZMRDclSEIR48qwhhwUQNHKnUDTKJhcWDVYloL1-mT5RVP7crDDMtsd1a2aUU3mSp9IFdryhwlwc9Ug0YTfy-1_ox79u8H4kQ_8-ppI2w5qqEz1mjoRrHhmZmqCZhlL4ZVWHNTyNCBOqLJlVEnl33K_PYHjNtzpG4jKGi5o0d8z0KygIYTXKphUgMSKuME-DOd0VE4xIkhtbGe0shqEIfnsaVA22fJKFlgABpkhVU2fAikSMhwRAqhNq3ekn2WXygL1fkURwX57EIeF-bBkS1ctgZS5lKaz8g4vMzYb-pi8R8LsiSLIOLvI16J-kVQZJP7dcY5kQGOXRaJW8L5xSI; m_pixel_ratio=1.75; x-referer=eyJyIjoiL2Jvb2ttYXJrcy8%2FcGFpcHY9MCZlYXY9QWZiMnMxTnhVdV91WkVfUmlmYjE1SFhVRl95clNpUW5ISG5nekhsOEdjZDJxSE9IRXhuTUdkRFdsc2NEZGFwM1g2RSIsImgiOiIvYm9va21hcmtzLz9wYWlwdj0wJmVhdj1BZmIyczFOeFV1X3VaRV9SaWZiMTVIWFVGX3lyU2lRbkhIbmd6SGw4R2NkMnFIT0hFeG5NR2REV2xzY0RkYXAzWDZFIiwicyI6Im1vYmlsZSJ9; wd=412x772; fr=0Io6O5s8KoLgbsXZd.AWXEheXKoKz1xa7kKeRNZbNcg-E.Bj9FoG.jZ.AAA.0.0.Bj_WpS.AWVQDaMcWZg',
+            'referer': 'https://mbasic.facebook.com/login/?li=X2r9Y3JggxzXh8T85_4uW87S&e=1348131&shbl=1&ref=dbl&refsrc=deprecated&_rdr',
             'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
             'sec-ch-ua-mobile': '?1',
             'sec-ch-ua-platform': '"Android"',
-            'sec-fetch-dest': 'manifest',
-            'sec-fetch-mode': 'cors',
+            'sec-fetch-dest': 'document',
+            'sec-fetch-mode': 'navigate',
             'sec-fetch-site': 'same-origin',
-            'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.107 Mobile/13C75 Safari/601.1.46',}
-            lo = session.post('https://mbasic.facebook.com/data/manifest/',data=log_data,headers=header).text
+            'sec-fetch-user': '?1',
+            'upgrade-insecure-requests': '1',
+            'user-agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36',}
+            lo = session.post('https://mbasic.facebook.com/login/?li=X2r9Y3JggxzXh8T85_4uW87S&e=1348131&shbl=1&ref=dbl&refsrc=deprecated&_rdr',data=log_data,headers=header).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
